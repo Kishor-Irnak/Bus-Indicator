@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Bus Tracker System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Smart Bus Tracker System</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#map">Map</a>
+            <a href="#schedule">Schedule</a>
+            <a href="#profile">Profile</a>
+            <a href="#admin">Admin</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="home">
+            <h2>Welcome to Smart Bus Tracker</h2>
+            <p>Track your buses in real-time and view schedules easily.</p>
+        </section>
+
+        <section id="map">
+            <h2>Bus Stops on Map</h2>
+            <div id="map"></div>
+        </section>
+
+        <section id="schedule">
+            <h2>Bus Schedule</h2>
+            <input type="text" id="search" placeholder="Search by Bus Number or Stop..." onkeyup="filterData()">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Bus Stop</th>
+                        <th>Bus Number</th>
+                        <th>Arrival Time</th>
+                        <th>Destination</th>
+                    </tr>
+                </thead>
+                <tbody id="busTable">
+                    <!-- Bus info rows will be inserted here -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="profile">
+            <h2>User Profile</h2>
+            <p>Manage your profile and saved routes here.</p>
+        </section>
+
+        <section id="admin">
+            <h2>Admin Dashboard</h2>
+            <p>Manage bus schedules, routes, and stops here.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Smart Bus Tracker System</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+<!-- Add this in the <head> of your HTML -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
